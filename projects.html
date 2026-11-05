@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Projects — Taylor Christian Mattheisen</title>
-<meta name="description" content="Project overviews: XANDRIA, KeelCode, Alexandria Engine, STARFALL, DUSKFALL, CapsuleForge, skill packs, OMNI-TRIP, RecForge, ARS, and more, with honest status badges and caveats.">
+<meta name="description" content="Project overviews: XANDRIA, KeelCode, Alexandria Engine, STARFALL, VoxBox: Amberfall, Shiftworlds, DEEPFALL, IRON EDEN, Scrap Dungeon, Surface Wars, ASHEN SWARM, DUSKFALL, CapsuleForge, skill packs, OMNI-TRIP, RecForge, ARS, and more, with honest status badges and caveats.">
 <link rel="canonical" href="https://joshoshfield-a11y.github.io/portfolio/projects.html">
 <style>
   :root { --bg:#0a0a0f; --bg-elev:#111118; --fg:#e8e8f0; --fg-dim:#8a8a9a;
@@ -61,15 +61,15 @@
 <p class="sub">Grouped overviews with honest status badges. Live means you can open it now. Shipped means a finished build exists. Complete means the scoped build is done. In Progress means it is real and running, but not finished. Pre-registered means the predictions and method were locked before data. Caveats are stated on the project, not hidden.</p>
 <h2>Engines &amp; Platforms</h2><div class="grid"><div class="card" id="xandria">
 <h3>XANDRIA <span class="badge">Live</span></h3>
-<p>Prompt-to-game engine. You describe a game in plain language and get a playable game back. Generation is deterministic and seeded, and every output runs through a validated GameSpec pipeline before it ships.</p><p>Five genres: third-person action, FPS arena, racing, platformer, and top-down shooter. Worlds go up to 8000m. NPC, enemy, crafting, and portal waves have shipped, and a continuous upgrade loop keeps shipping new waves on branches for review. SaaS tiers: Free (5 generations/mo), Hobby $12/mo, Pro $39/mo, billed through Stripe. The itch.io edition splits into a free demo (2 genres, no export) and a full edition at $10+ PWYW (all 5 genres, HTML export).</p>
+<p>Prompt-to-game engine. You describe a game in plain language and get a playable game back. Generation is deterministic and seeded, and every output runs through a validated GameSpec pipeline before it ships.</p><p>Five genres: third-person action, FPS arena, racing, platformer, and top-down shooter. Worlds go up to 8000m. NPC, enemy, crafting, and portal waves have shipped, and a continuous upgrade loop that shipped waves on branches for review. That loop is paused since October 28, 2026; a status-effects wave is finished and merge-ready but unmerged, and the merge is still the author's call. SaaS tiers: Free (5 generations/mo), Hobby $12/mo, Pro $39/mo, billed through Stripe. The itch.io edition splits into a free demo (2 genres, no export) and a full edition at $10+ PWYW (all 5 genres, HTML export).</p>
 <p><strong>Stack:</strong> TypeScript, Three.js, cannon-es, Vite</p>
 <p class="links"><a href="https://xandria-omega.vercel.app" target="_blank" rel="noopener">Live app</a> &middot; <a href="https://skiticusprime.itch.io/xandria" target="_blank" rel="noopener">itch.io</a> &middot; <a href="https://github.com/joshoshfield-a11y/XANDRIA" target="_blank" rel="noopener">GitHub</a></p>
 </div>
 <div class="card" id="keelcode">
 <h3>KeelCode <span class="badge">Complete</span></h3>
-<p>Standalone game engine built around one framework spec and three backends, so the same game logic can run in different runtimes without a rewrite.</p><p>Backends: a TypeScript/Three.js reference implementation, a Rust headless simulation with wgpu, and Babylon with Havok physics. The <code>keel</code> CLI is the primary interface. All five build waves are merged, including STARFALL: Drift Arena, a 3D vertical slice built on the TypeScript backend. Local repo only; there is no public link.</p>
+<p>Standalone game engine built around one framework spec and three backends, so the same game logic can run in different runtimes without a rewrite.</p><p>Backends: a TypeScript/Three.js reference implementation, a Rust headless simulation with wgpu, and Babylon with Havok physics. The <code>keel</code> CLI is the primary interface. All five build waves are merged, plus waves 4 through 6 merged on October 20, 2026, including STARFALL: Drift Arena, a 3D vertical slice built on the TypeScript backend. Public on GitHub under MIT.</p>
 <p><strong>Stack:</strong> TypeScript, Three.js, Rust, wgpu, Babylon, Havok</p>
-<p class="links">Local only</p>
+<p class="links"><a href="https://github.com/joshoshfield-a11y/keelcode" target="_blank" rel="noopener">GitHub</a></p>
 </div>
 <div class="card" id="alexandria-engine">
 <h3>Alexandria Engine <span class="badge">In Progress</span></h3>
@@ -96,14 +96,55 @@
 <p class="links">Local proof build</p>
 </div>
 </div><h2>Games</h2><div class="grid"><div class="card" id="starfall">
-<h3>STARFALL <span class="badge">In Progress</span></h3>
-<p>Open-world top-down 2D space shooter for mobile and desktop, with nine ship classes from fighter to mothership.</p><p>The v2 sprite expansion generated 137 sprites across factions, celestial bodies, and FX. Wired in game: player ships, faction ships (enemies), celestial bodies (planets, moons, asteroids, fields, and biomes), and stations all render the v2 art. Not wired yet: the FX set proper, meaning projectiles, explosions, powerup icons, turrets, mines and drones, and collectibles. Rendering for those is still procedural.</p>
+<h3>STARFALL <span class="badge">Live</span></h3>
+<p>Open-world top-down 2D space shooter for mobile and desktop, with nine ship classes from fighter to mothership.</p><p>Version 1.7 is live on itch.io as a free Android APK and Linux build, with aim snap, New Game above the fold, and narration-gated slides. The v2 sprite expansion generated 137 sprites across factions, celestial bodies, and FX. Wired in game: player ships, faction ships (enemies), celestial bodies (planets, moons, asteroids, fields, and biomes), and stations all render the v2 art. Not wired yet: the FX set proper, meaning projectiles, explosions, powerup icons, turrets, mines and drones, and collectibles. Rendering for those is still procedural. Beta feedback for a 1.8 pass is in progress, including a confirmed 0-credit ore stack sale bug and a tribute popup that can get the player killed; neither fix is shipped yet, and real-phone playtesting is still open.</p>
 <p><strong>Stack:</strong> JavaScript, Canvas</p>
+<p class="links"><a href="https://skiticusprime.itch.io/starfall" target="_blank" rel="noopener">itch.io</a></p>
+</div>
+<div class="card" id="voxbox-amberfall">
+<h3>VoxBox: Amberfall <span class="badge">In Progress</span></h3>
+<p>Standalone open-world RPG, forked from the XANDRIA upgrade work. The world is stuck at dusk: amber, solidified light, rained down and now powers camps, tempers gear, and attunes people to the wild zones. The player is a salvager walking the dark between lit places.</p><p>Structure is a blend the author delegated and approved on October 29, 2026: the Amber Spine (one beacon spire per region, taken in any order), camp tiers (progression from salvage and gathering anywhere), and free play (radiant quests, dynamic events, world bosses, factions, bestiary from the start). Hard freedom rules: no hard locks, danger is the gate and it is telegraphed, free camp recall, fast travel by visiting. First region Emberwood (Hollow Camp, Drowned Spire, optional capstone beast). Phase 1 strip work is merged into the fork.</p><p><strong>Caveat:</strong> a November 3, 2026 pivot moves the look away from boxy voxel terrain toward Terrain3D 1.1.0 on Godot 4.8 beta 1. A four-region textured test project is verified (procedural grass, rock, sand, and amber textures; central plateau reads clearly), but it is not yet wired into the game, and whether it should be is still the author's decision. Grass texture and the auto-shader colour split still need tuning, and the realism views read darker, with re-brightening a separate decision.</p>
+<p><strong>Stack:</strong> TypeScript, Three.js (fork); Godot 4.8, Terrain3D (look test)</p>
+<p class="links">Fork, local build</p>
+</div>
+<div class="card" id="shiftworlds">
+<h3>Shiftworlds <span class="badge">In Progress</span></h3>
+<p>Game Off 2026 entry for the theme SHIFT, built as a true 2D Canvas game after an earlier 3D version was rebuilt on the author's word as too difficult. Shift between overlapping Amber and Void worlds; gather 12 shards, hold the crossing for 10 seconds (the hold pauses instead of resetting), and reach the far beacon. The goal platform exists only in Void, so finishing requires shifting.</p><p>Easier tuning than the first build: 12 shards (was 20), a 10-second hold (was 20), wider platforms, checkpoints, coyote time, jump buffer, double jump, and dash. Sprite sheets 1 and 2 are wired (player, shards, beacon, robot enemy, Amber-Void tiles; 23 sprites embedded); sheets 3 and 4 are not yet wired. Live build is syntax-checked, not real-phone tested. Nothing pushed, published, or submitted; disclosure and repo choices are still the author's, and the deadline is December 1, 2026 at 1:37pm PST.</p>
+<p><strong>Stack:</strong> JavaScript, Canvas</p>
+<p class="links">Local build; submission pending author decision</p>
+</div>
+<div class="card" id="deepfall">
+<h3>DEEPFALL <span class="badge">In Progress</span></h3>
+<p>Side-view 2D roguelike dungeon platformer with Terraria-style mining and crafting plus WazHack-style systemic danger. Direction settled November 4, 2026: the Amber/Void shift is deferred, not cut; the hooded skeleton is a separate unlockable hero, not a fourth starting class; a chunk-streamed world is the phased end goal, with Phase 1 first.</p><p>Phases 1 through 4 built November 4, 2026 in Godot 4.8 (seed 20261101): Forgotten Mines, 14 of 14 rooms, 31 ore veins, all connected; tech soldier, mining, torches, real PointLight2D lighting, a polished chamber with an Amber Spire landmark, twin-stick touch controls, and an Android APK (com.dogbyte.deepfall, 60,142,141 bytes in the Phase 4 export). Starting classes are tech soldier, hooded mage, and red soldier. Atlas art is staged raw sheets, not yet fully wired.</p><p><strong>Caveat:</strong> the APK is not real-phone tested; chunk streaming and save-reload are specified, not built; there are no enemies or combat yet. Whether DEEPFALL replaces or sits beside Shiftworlds as the Game Off entry, and whether enemies and combat or chunk streaming comes next, are still the author's calls.</p>
+<p><strong>Stack:</strong> Godot 4.8, GDScript, Android export</p>
+<p class="links">Local APK build</p>
+</div>
+<div class="card" id="iron-eden">
+<h3>IRON EDEN <span class="badge">Paused</span></h3>
+<p>Game built in passes under an autonomous loop, with a gate pass per pass. Currently at v1.51 after Pass 49, with Pass 50 queued. The loop is paused since October 26, 2026 and resumes only on the author's word. A gate FAIL or SKIP never halts the loop or overrides a gate PASS; two consecutive gate fails on one pass halt it. Sprites follow the standing rule: generated sprite templates in the style of references supplied, never coded primitives shipped as final art.</p>
+<p><strong>Stack:</strong> Game build loop</p>
 <p class="links">Local build</p>
 </div>
+<div class="card" id="scrap-dungeon">
+<h3>Scrap Dungeon <span class="badge">In Progress</span></h3>
+<p>Original dungeon game, now the base for a full-scale RTS direction decided October 30, 2026: massive troop counts, battles, and mechs in strict 90-degree top-down view, explicitly not orthographic. Vanilla Rusted Warfare research corrected two assumptions: it has no distinct factions and no general wreck/salvage loop (only neutral crystals and money crates), so persistent wrecks plus salvage is this game's open differentiation, with asymmetric factions and terrain that matters.</p><p>Phases 1 through 6 are built, with tile-fix and menu waves verified on top. Staged weapon and gear sheets are sliced into 16 transparent 400x800 item PNGs ready for loot-table wiring. A sniper-telegraph regression and a completionist persona gap remain open, and Phase 6 parent verification was never cleanly closed. Nothing ships or publishes until the author has reviewed the full rundown and given his word.</p><p><strong>Stack:</strong> Game</p>
+<p class="links">Local build; staged assets only</p>
+</div>
+<div class="card" id="surface-wars">
+<h3>Surface Wars <span class="badge">In Progress</span></h3>
+<p>Strict 90-degree overhead strategy game; no angled, orthographic, diagonal, or side-view sprite ships as close enough. Version 1.8 changed UI and input only, with no mechanic, balance, AI, map, or cost change, and its launch, touch, stick feel, and hero and credit persistence across the update stay the author's verdicts.</p><p>Tile rule, set October 30, 2026: linear and connective features are never baked into a base tile. Paths, cracks, tracks, roads, wires, pipes, and stepping stones are cosmetic overlays, independent of base tile, drawn over any base and aligned to tile-centre lines meeting exactly at tile edges. <strong>Caveat:</strong> staged wreck art failed zoom-1 readability (identical grey discs at 64px versus live wrecks reading as debris) and is not swapped in as-is; team-tinted versus team-neutral wrecks is still an open decision.</p>
+<p><strong>Stack:</strong> Game</p>
+<p class="links">Local build</p>
+</div>
+<div class="card" id="ashen-swarm">
+<h3>ASHEN SWARM <span class="badge">In Progress</span></h3>
+<p>Original top-down roguelite survival shooter. Version 1.4, parent-verified October 31, 2026, has no random spawns: a visible Ember Portal cycles fixed anchors (NW, NE, SW, SE), relocating every 120 seconds with a 3-second warning. Only spawn location was de-randomised; enemy-kind selection is still weighted random, an open question, not assumed away. Feathered tile-edge blending is in (unblended hard edges 40 to 0). Still not proven on a real Galaxy S25.</p>
+<p><strong>Stack:</strong> Game, Android APK</p>
+<p class="links">Local APK build</p>
+</div>
 <div class="card" id="duskfall">
-<h3>DUSKFALL <span class="badge">In Progress</span></h3>
-<p>Open-world action RPG with PS2 and GTA-III-era textured low-poly graphics. All textures are procedural; there are no external assets.</p><p>Version 1 scope is one docks district on foot: third-person movement, gang and cop AI, wanted stars, a quest chain of 3 or more missions, dialogue, XP, a GTA-style HUD, and a localStorage save. Drivable cars are out of v1 by design. Graphics Wave 4 is complete: MeshStandardMaterial with procedural roughness and normal maps, an EffectComposer post chain (bloom on desktop, FXAA on both tiers), PCF soft sun shadows on desktop, and planar water reflection on desktop.</p><p><strong>Caveat:</strong> frame rate cannot be measured honestly in the sandbox (software rendering). The targets, 60 fps on desktop and 30 fps on mobile (Galaxy S25), still need a real-device pass.</p>
+<h3>DUSKFALL <span class="badge">Paused</span></h3>
+<p>Open-world action RPG with PS2 and GTA-III-era textured low-poly graphics. All textures are procedural; there are no external assets.</p><p>Version 1 scope is one docks district on foot: third-person movement, gang and cop AI, wanted stars, a quest chain of 3 or more missions, dialogue, XP, a GTA-style HUD, and a localStorage save. Drivable cars are out of v1 by design. Set aside since October 28, 2026 in favour of the VoxBox: Amberfall fork; DUSKFALL stays shelved, not deleted. Graphics Wave 4 is complete: MeshStandardMaterial with procedural roughness and normal maps, an EffectComposer post chain (bloom on desktop, FXAA on both tiers), PCF soft sun shadows on desktop, and planar water reflection on desktop.</p><p><strong>Caveat:</strong> frame rate cannot be measured honestly in the sandbox (software rendering). The targets, 60 fps on desktop and 30 fps on mobile (Galaxy S25), still need a real-device pass.</p>
 <p><strong>Stack:</strong> TypeScript, Three.js, Vite</p>
 <p class="links">Local build</p>
 </div>
@@ -127,7 +168,7 @@
 </div>
 <div class="card" id="omni-trip">
 <h3>OMNI-TRIP <span class="badge">In Progress</span></h3>
-<p>Android camera app with real-time visual effects: face-mesh and headgear particle overlays built with Three.js.</p><p>An earlier build hid the face overlay because particle points were scaled by size attenuation against an orthographic overlay camera, blowing each point up to hundreds of pixels. That was fixed and verified headlessly. Current status is real-device testing: overlay visibility, hand trails, and camera flipping still need a confirmed pass on the phone.</p>
+<p>Android camera app with real-time visual effects: face-mesh and headgear particle overlays built with Three.js.</p><p>An earlier build hid the face overlay because particle points were scaled by size attenuation against an orthographic overlay camera, blowing each point up to hundreds of pixels. That was fixed and verified headlessly. Current status is real-device testing: overlay visibility, hand trails, and camera flipping still need a confirmed pass on the phone, with a dedicated debug, error-check, and upgrade pass and cross-device installs in progress.</p>
 <p><strong>Stack:</strong> Android, Three.js, WebView</p>
 <p class="links">Local APK builds</p>
 </div>
@@ -163,7 +204,7 @@
 </div>
 <div class="card" id="ars">
 <h3>Aetheric Resonance Surveyor (ARS) <span class="badge">Pre-registered</span></h3>
-<p>Multi-channel anomaly-signal monitoring instrument. It watches multiple channels under a standing watch that reports only genuine Tier-1 flags. Silence is the default.</p><p>Two additions landed in October 2026: a provenance cross-check (radio and harmonic captures are checked against the broadcaster-declared now-playing title, so a mundane human origin is corroborated or marked unaccounted instead of assumed) and a transient registry (structured transients the gates discard are kept, and recurrences across days are reported as prompts for a human look, never as detections).</p><p>The beacon experiment v1 is pre-registered: 1 baseline plus 5 transmission trials, blinded analysis, pre-committed hash. Status: instrument live, experiment pre-registered and awaiting trials. By the standing identification rule, a signal counts as man-made only when its human origin is confirmed, not merely pattern-matched.</p>
+<p>Multi-channel anomaly-signal monitoring instrument. It watches multiple channels under a standing watch that reports only genuine Tier-1 flags. Silence is the default.</p><p>Two additions landed in October 2026: a provenance cross-check (radio and harmonic captures are checked against the broadcaster-declared now-playing title, so a mundane human origin is corroborated or marked unaccounted instead of assumed) and a transient registry (structured transients the gates discard are kept, and recurrences across days are reported as prompts for a human look, never as detections).</p><p>The beacon experiment v1 is pre-registered: 1 baseline plus 5 transmission trials, blinded analysis, pre-committed hash. Status: experiment pre-registered and awaiting trials; the main survey loops, bridge, and AEGIS interception system are paused, while the four-hour contact watch was deliberately left running. A November 1 re-correlation dropped an October 30 weather-seismic pair below the gate; only a self-derived intermagnet-versus-telluric pair remains, and it is not independent corroboration and not a Tier-1 flag. By the standing identification rule, a signal counts as man-made only when its human origin is confirmed, not merely pattern-matched.</p>
 <p><strong>Stack:</strong> Python</p>
 <p class="links"><a href="philosophy.html">Philosophy: Beacon Experiment</a></p>
 </div>
